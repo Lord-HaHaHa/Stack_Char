@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -29,60 +28,16 @@ namespace Stack_Char
 
         private void btn_Push_Click(object sender, RoutedEventArgs e)
         {
-            stack.Push(txt_Push.Text.ToCharArray()[0]);
+            foreach (char Char in txt_Push.Text.ToCharArray())
+            {
+                stack.Push(Char);
+            }
             txt_Push.Clear();
         }
 
         private void btn_Pop_Click(object sender, RoutedEventArgs e)
         {
             txt_Pop.Text = stack.Pop().ToString();
-        }
-        public class Stack
-        {
-            // Attribute
-            private char[] Elemente;
-
-            private int Max = 0;
-            private int CurrLength = 0;
-
-            // Konstruktor
-            public Stack(int length)
-            {
-                Elemente = new char[length];
-                Max = length;
-            }
-
-            //Methoden
-            public bool IsEmpty()
-            {
-                if(CurrLength == 0)
-                    return true;
-                return false;
-            }
-
-            public bool Push(char value)
-            {
-                if (CurrLength < Max)
-                {
-                    Elemente[CurrLength++] = value;
-                }
-                Trace.WriteLine(CurrLength);
-                if (CurrLength == Max)
-                    return false;
-                return true;
-            }
-
-            public char Pop()
-            {
-                char Char;
-                if (CurrLength == 0)
-                    return ' ';
-                CurrLength--;
-                Char = Elemente[CurrLength];
-                Elemente[CurrLength] = ' ';
-                Trace.WriteLine(Elemente[CurrLength]);
-                return Char;
-            }
         }
     }
 }
