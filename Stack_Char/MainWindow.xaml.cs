@@ -30,7 +30,10 @@ namespace Stack_Char
         {
             foreach (char Char in txt_Push.Text.ToCharArray())
             {
-                stack.Push(Char);
+                if (!stack.Push(Char))
+                    txt_error.Content = "Fehler beim Puschen des Chars: " + Char;
+                else
+                    txt_error.Content = "";
             }
             txt_Push.Clear();
         }

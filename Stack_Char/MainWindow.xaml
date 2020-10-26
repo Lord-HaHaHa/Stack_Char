@@ -10,27 +10,10 @@
         <TextBox x:Name="txt_Push" HorizontalAlignment="Left" Height="23" Margin="188,92.75,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="txt_Pop" HorizontalAlignment="Right" Height="23" Margin="0,92.75,181.75,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Button x:Name="btn_Push" Content="Push" HorizontalAlignment="Left" Margin="188,115.75,0,0" VerticalAlignment="Top" Width="75" Click="btn_Push_Click"/>
-        <Button x:Name="btn_Pop" Content="Pop" HorizontalAlignment="Right" Margin="0,115.75,226.75,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.5,0.5" Click="btn_Pop_Click">
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="-2.759"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Button.RenderTransform>
-        </Button>
+        <Button x:Name="btn_Pop" Content="Pop" HorizontalAlignment="Right" Margin="0,115.75,226.75,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.5,0.5" Click="btn_Pop_Click"/>
         <Label Content="Eingabe" HorizontalAlignment="Left" Margin="188,63.5,0,0" VerticalAlignment="Top"/>
-        <Label Content="Ausgabe" HorizontalAlignment="Right" Margin="0,63.5,245.623,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
-            <Label.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="3.404"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Label.RenderTransform>
-        </Label>
+        <Label Content="Ausgabe" HorizontalAlignment="Right" Margin="0,63.5,245.623,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5"/>
+        <Label x:Name="txt_error" Content="" HorizontalAlignment="Left" Margin="188,179,0,0" VerticalAlignment="Top" Width="425"/>
 
     </Grid>
 </Window>
